@@ -1,5 +1,7 @@
 The Sparklines.jl package is licensed under the MIT "Expat" License:
 
+> A derived work from spark[1], Copyright (c) Zach Holman, http://zachholman.com
+> 
 > Copyright (c) 2014: Matt Bauman.
 >
 > Permission is hereby granted, free of charge, to any person obtaining
@@ -20,3 +22,5 @@ The Sparklines.jl package is licensed under the MIT "Expat" License:
 > CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 > TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 > SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[1]. https://github.com/holman/spark/
