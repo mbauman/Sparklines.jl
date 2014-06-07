@@ -11,3 +11,5 @@ using Base.Test
 @test sprint(spark, [1,50,100])                   == "▁▄█"
 @test sprint(spark, [2,4,8])                      == "▁▃█"
 @test sprint(spark, [1,2,3,4,5])                  == "▁▂▄▆█"
+
+@test sprint(sparkln, [1,2,3,4,5])                == "▁▂▄▆█\n"

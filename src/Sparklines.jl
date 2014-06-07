@@ -1,6 +1,6 @@
 module Sparklines
 
-export spark
+export spark, sparkln
 
 const ticks = ['▁','▂','▃','▄','▅','▆','▇','█']
 
@@ -17,5 +17,9 @@ function spark(io::IO, itr)
     idxs = div(((values .- min) * 2^8), f)
     print(io, utf8(ticks[idxs.+1]))
 end
+
+sparkln(itr) = sparkln(STDOUT, itr)
+sparkln(io::IO, itr) = (spark(io, itr); println(io))
+
 
 end # module
