@@ -12,9 +12,9 @@ function spark(io::IO, itr)
     min, max = extrema(values)
     
     f = div((max - min) * 2^8, length(ticks)-1)
-    f < 1 && (f = 1)
+    f < 1 && (f = one(typeof(f)))
     
-    idxs = div(((values .- min) * 2^8), f)
+    idxs = convert(Vector{Int}, div(((values .- min) * 2^8), f))
     print(io, utf8(ticks[idxs.+1]))
 end
 
