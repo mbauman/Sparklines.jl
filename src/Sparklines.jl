@@ -3,7 +3,7 @@ module Sparklines
 export spark, sparkln, vspark
 
 const ticks = ['▁','▂','▃','▄','▅','▆','▇','█']
-const vticks = ['▏', '▎', '▍', '▌', '▋', '▊', '▉']
+const vticks = ['▏', '▎', '▍', '▌', '▋', '▊', '▉','█']
 
 !isdefined(Base, :extrema) && (extrema(x) = (minimum(x), maximum(x)))
 
