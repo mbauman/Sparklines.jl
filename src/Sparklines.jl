@@ -10,11 +10,11 @@ spark(itr) = spark(STDOUT, itr)
 function spark(io::IO, itr)
     values = collect(itr)
     min, max = extrema(values)
-    
+
     f = div((max - min) * 2^8, length(ticks)-1)
     f < 1 && (f = 1)
-    
-    idxs = div(((values .- min) * 2^8), f)
+
+    idxs = trunc(Int, ((values .- min) * 2^8) / f)
     print(io, utf8(ticks[idxs.+1]))
 end
 
