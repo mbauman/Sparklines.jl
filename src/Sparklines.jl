@@ -1,5 +1,7 @@
 module Sparklines
 
+import Compat: String
+
 export spark, sparkln
 
 const ticks = ['▁','▂','▃','▄','▅','▆','▇','█']
@@ -15,7 +17,7 @@ function spark(io::IO, itr)
     f < 1 && (f = one(typeof(f)))
     
     idxs = convert(Vector{Int}, div(((values .- min) * 2^8), f))
-    print(io, utf8(ticks[idxs.+1]))
+    print(io, convert(String, ticks[idxs.+1]))
 end
 
 sparkln(itr) = sparkln(STDOUT, itr)
