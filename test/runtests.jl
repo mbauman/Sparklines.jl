@@ -1,5 +1,5 @@
 using Sparklines
-using Base.Test
+using Test
 
 # Original tests from https://github.com/holman/spark/blob/master/spark-test.sh
 # Copyright (c) Zach Holman, http://zachholman.com, MIT license
