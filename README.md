@@ -8,7 +8,7 @@ A Julia implementation of [spark](https://github.com/holman/spark).
 
     julia> using Sparklines
     
-    julia> spark(sin(0:0.2:2pi))
+    julia> spark(sin.(0:0.2:2pi))
     ▄▅▅▆▇▇▇███▇▇▆▆▅▅▄▃▂▂▁▁▁▁▁▁▁▁▂▂▃▄
     
     julia> spark(cumsum(randn(80)))
